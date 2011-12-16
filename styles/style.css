@@ -1,0 +1,111 @@
+body{
+	/*font-family: Garamond, sans-serif;
+	font-family: 'Courier New', Courier, monospace;*/
+	font-family: 'Over the Rainbow', cursive;
+	font-size: 20px;
+	font-weight: bold;
+}
+a{
+	font-size: 12px;
+	color: #7E2217;
+}
+a img{
+	border: none;
+}
+#container{
+	margin: 0 auto;
+	width: 1000px;
+}
+#main{
+	position: relative;
+	width: 1000px;
+	height: 300px;
+}
+.holder{
+	width: 483px;
+	height: 604px;
+	border: 1px solid #000000;
+	-moz-box-shadow: 5px 5px 10px #999999;
+	-webkit-box-shadow: 5px 5px 10px #999999;
+	box-shadow: 5px 5px 10px #999999;
+}
+.menu{
+	margin: 0;
+	padding: 0;
+}
+.menu li{
+	font-size: 10px;
+	list-style: none;
+	float: left;
+}
+.menu li a:link, .menu li a:visited{
+	display: block;
+	text-decoration: none;
+	margin: 0;
+}
+.menu li a:hover{
+	-moz-box-shadow: 5px 5px 10px #999999;
+	-webkit-box-shadow: 5px 5px 10px #999999;
+	box-shadow: 5px 5px 10px #999999;
+}
+.menu li ul{
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+}
+.menu li ul li{
+	display: inline;
+	float: none;
+}
+.menu li ul li a{
+	padding: 10px;
+}
+.menu li ul li a img{
+	vertical-align: middle;
+}
+.menu li ul li a:link, .menu li ul li a:visited{
+	-moz-box-shadow: 5px 5px 10px #999999;
+	-webkit-box-shadow: 5px 5px 10px #999999;
+	box-shadow: 5px 5px 10px #999999;
+	width: auto;
+	margin: 0 0 0 16px;
+}
+.menu li ul li a:hover{
+	-moz-box-shadow: 5px 5px 10px #999999;
+	-webkit-box-shadow: 5px 5px 10px #999999;
+	box-shadow: 5px 5px 10px #999999;
+}
+#left{
+	position: absolute;
+	padding: 0;
+	width: 500px;
+	top: 250px;
+}
+#left #banner{
+	font-size: 50px;
+}
+#right{
+	position: absolute;
+	padding: 0;
+	width: 500px;
+	height: 600px;
+	left: 500px;
+	top: 50px;
+}
+#title{
+	font-family: Palatino, sans-serif;
+	font-size: 12px;
+	padding: 10px;
+	text-align: left;
+}
+#text{
+	font-family: Palatino, sans-serif;
+	font-size: 12px;
+	padding: 10px;
+	text-align: left;
+}
+footer{
+	position: absolute;
+	bottom: 0px;
+}

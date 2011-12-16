@@ -1,0 +1,15 @@
+**July 2009-April 2010: MegaMobile, Inc. (Junior Developer-Service Quality Assurance)
+
+Client Projects handled:
+
++QUEST Broadcasting Stations Textline
+
+This project dealt with ensuring the proper flow of reply messages according to user input. The SMS charging was also checked accordingly. It was then passed for clearance on all telecommunication companies.
+
++SMS Raffle Services
+
+This project was for SMS clients. It dealt with ensuring the proper workflow and charging of reply messages. The internal testing was then passed onto telecommunication companies for clearance.
+
++Polling Site for INQ services
+
+This project is a web application that displays the number of hits on each keyword for a particular service under Inquirer.
