@@ -80,7 +80,19 @@ a img{
 	position: absolute;
 	padding: 0;
 	width: 500px;
-	top: 250px;
+	top: 150px;
+}
+#left #arrow{
+	background: url(../images/arrow-brace.png) no-repeat;
+	width: 150px;
+	height: 18px;
+	border: none;
+	margin-bottom: 50px;
+	margin-left: 100px;
+	display: inline-block;
+}
+#left #arrow.no-image{
+	background: none;
 }
 #left #banner{
 	font-size: 50px;

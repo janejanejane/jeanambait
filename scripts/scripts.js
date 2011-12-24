@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	var currentPage = 1;
 	
+	$('#arrow').hide();
+	
 	$('.menu > li').bind('mouseover', openSubMenu);
 	$('.menu > li').bind('mouseout', closeSubMenu);
 	
@@ -23,6 +25,10 @@ $(document).ready(function(){
 				$('<div id="' + page + '"></div>').appendTo('.holder');
 				if(result){
 					var lines = result.split("\n");
+					var toggleClassFcn = function(){$("#arrow").toggleClass("no-image");}
+					setInterval(toggleClassFcn, 1000);
+					$('#banner').css('margin-left','-250px');
+					$('#arrow').show();
 					$('#photo').slideUp('slow');
 					$.each(lines, function(key, value){
 						if(value.length > 1){
@@ -58,6 +64,10 @@ $(document).ready(function(){
 					//$('.holder').css({'overflow-y': 'scroll'});
 				}
 			}else{
+				var toggleClassFcn = function(){$("#arrow").toggleClass("no-image");}
+				setInterval(toggleClassFcn, 1000);				
+				$('#banner').css('margin-left','-250px');
+				$('#arrow').show();
 				$('#photo').slideUp('slow');
 				$('#text' + currentPage).show();
 			}
@@ -65,7 +75,9 @@ $(document).ready(function(){
 	});
 	
 	$('#banner').click(function(){
+		$(this).css('margin-left','10px');
 		$('#photo').slideDown('slow');
+		$('#arrow').hide();
 		$('#text' + currentPage).hide();
 	});
 });
