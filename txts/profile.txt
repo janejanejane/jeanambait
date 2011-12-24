@@ -1,15 +1,88 @@
+**April 2010-Present: dB Wizards, Inc.(Junior Consultant [Business Solutions Group])
+
+Client Projects handled:
+
+>>>PLDT-B6
+
+This engagement is a series of development involving MOSS projects that are requested by users of PLDT. The projects are:
+
+||FIMS (Facility Incident Management System)-enhancements to the existing site: 
+
+(1) email notification, 
+
+(2) incorporation of a ticket number, and 
+
+(3) SSRS for the Summary Report and Status Report based Service Requests.
+
+||APC (Asset Protection Center) Portal-enhancements to the existing site: 
+
+(1) creation of two announcements lists, and 
+
+(2) email and SMS notifications for a limited group.
+
+>>>ServiceOne 
+
+This is a migration task that restores a 32-bit backup of the previous site to a 64-bit MOSS environment.
+
+>>>CEPALCO (CI Portal)
+
+This project is a restoration engagement to the previously implemented site.
+
+>>>Wizardsgroup Internal Portal
+
+This project is a modification to the existing site. Task for this project was to create a Silverlight application that shows a gallery of images.  
+
+>>>PLDT-B5
+
+This project is an interim solution to the APV Doc Tracker application that was integrated with the K2 BlackPearl application. It automated the process of closing K2 Worklist Items' Process Instances that are orphaned based on document numbers from the APV Doc Tracker database. Also, with regard to this closing is the transferring of corresponding rowid(s) and workflowid(s) to designated processed and archived tables.
+
+>>>UNILEVER-MOSS
+
+This project is a combination of team sites migration from SharePoint 2003 to MOSS and custom site development. Tasks include: 
+
+(1) development of OHPortal (Occupational Health Portal) site, 
+
+(2) creation of SQL Reports for Leave Application site, 
+
+(3) creation of SSIS package for MyOfi-KISS application that links SharePoint list to database table, and 
+
+(4) application and technical support. 
+
+>>>ServiceOne - Astrazeneca
+
+This project is a repository of incident reports for the company's helpdesk. This is a simple SharePoint list that has custom field column for ticket number and workflow processes that automatically sends emails to concerned individuals.
+
+>>>ICTSI (International Container Terminal Services, Inc.) Custom Development
+
+This project dealt with the development of three custom applications for ICTSI. Tasks include: 
+
+(1) test scripts creation and 
+
+(2) Truck Driver ID System module QA testing.
+
+
+>>>DB Wizards Inc-Internal Portal Upgrade and Migration
+
+This project dealt with the migration of the internal portal from MOSS to SharePoint 2010. Tasks include: 
+
+(1) configuration of 'My Site' and 'User Profile Synchronization' and 
+
+(2) QA testing.
+
+
+
 **July 2009-April 2010: MegaMobile, Inc. (Junior Developer-Service Quality Assurance)
 
 Client Projects handled:
 
-+QUEST Broadcasting Stations Textline
+>>>QUEST Broadcasting Stations Textline
 
 This project dealt with ensuring the proper flow of reply messages according to user input. The SMS charging was also checked accordingly. It was then passed for clearance on all telecommunication companies.
 
-+SMS Raffle Services
+>>>SMS Raffle Services
 
 This project was for SMS clients. It dealt with ensuring the proper workflow and charging of reply messages. The internal testing was then passed onto telecommunication companies for clearance.
 
-+Polling Site for INQ services
+>>>Polling Site for INQ services
 
 This project is a web application that displays the number of hits on each keyword for a particular service under Inquirer.
