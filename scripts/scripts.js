@@ -57,12 +57,15 @@ $(document).ready(function(){
 					});
 					//$('.holder').css({'overflow-y': 'scroll'});
 				}
+			}else{
+				$('#photo').slideUp('slow');
+				$('#text' + currentPage).show();
 			}
 		});
 	});
 	
 	$('#banner').click(function(){
 		$('#photo').slideDown('slow');
-		$('#text' + currentPage).remove();
+		$('#text' + currentPage).hide();
 	});
 });
