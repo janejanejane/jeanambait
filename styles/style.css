@@ -1,7 +1,11 @@
 body{
 	/*font-family: Garamond, sans-serif;
-	font-family: 'Courier New', Courier, monospace;*/
+	font-family: 'Courier New', Courier, monospace;
 	font-family: 'Over the Rainbow', cursive;
+	font-family: Lucida Console, sans-serif;
+	background: url(../images/background.png) repeat;*/
+	font-family: Tempus Sans Itc, sans-serif;
+	background-color: #FFF2BC;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -30,14 +34,52 @@ a img{
 	-webkit-box-shadow: 5px 5px 10px #999999;
 	box-shadow: 5px 5px 10px #999999;
 }
-.menu{
+#menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#menu li{
+	font-size: 12px;
+	list-style: none;
+	float: left;
+	margin: 10px;
+}
+#menu ul{
+	font-size: 12px;
+	list-style: none;
+	float: left;
+	margin-left: 50px;
+}
+#menu ul ul{
+	font-size: 12px;
+	list-style: none;
+	float: left;
+	width: 300px;
+	margin-left: 150px;
+}
+#menu li ul{
+	position: absolute;
 	margin: 0;
 	padding: 0;
 }
-.menu li{
-	font-size: 10px;
-	list-style: none;
+#menu li ul li{
+	display: inline;
+	float: none;
+}
+#menu li a{
+	text-decoration: none;
+	padding: 5px 0;
+	width: 150px;
+	background: #FF0000;
+	color: #000000;
 	float: left;
+	text-align: center;
+	border: 1px solid #463E4C;
+}
+#menu li a:hover{
+	background: #000000;
+	color: #FF0000;
 }
 .menu li a:link, .menu li a:visited{
 	display: block;
@@ -48,16 +90,6 @@ a img{
 	-moz-box-shadow: 5px 5px 10px #999999;
 	-webkit-box-shadow: 5px 5px 10px #999999;
 	box-shadow: 5px 5px 10px #999999;
-}
-.menu li ul{
-	position: absolute;
-	visibility: hidden;
-	margin: 0;
-	padding: 0;
-}
-.menu li ul li{
-	display: inline;
-	float: none;
 }
 .menu li ul li a{
 	padding: 10px;
