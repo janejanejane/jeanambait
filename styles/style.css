@@ -58,6 +58,18 @@ a img{
 	width: 300px;
 	margin-left: 150px;
 }
+#me{
+	margin-top: 90px;
+}
+#aboutgroup{
+	margin-top: -143px;
+}
+#workout{
+	margin-top: 50px;
+}
+#workoutgroup{
+	margin-top: -70px;
+}
 #menu li ul{
 	position: absolute;
 	margin: 0;
