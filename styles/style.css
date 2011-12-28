@@ -43,32 +43,24 @@ a img{
 	font-size: 12px;
 	list-style: none;
 	float: left;
-	margin: 10px;
+	margin: 10px 10px 10px 0;
+	padding: 0 10px;
+	background: url(../images/centernode.png) repeat-y;
 }
 #menu ul{
 	font-size: 12px;
 	list-style: none;
 	float: left;
-	margin-left: 50px;
+	margin-left: 90px;
+	padding: 0;
+	background: url(../images/vertical.png) repeat-y;
 }
 #menu ul ul{
 	font-size: 12px;
 	list-style: none;
 	float: left;
 	width: 300px;
-	margin-left: 150px;
-}
-#me{
-	margin-top: 90px;
-}
-#aboutgroup{
-	margin-top: -143px;
-}
-#workout{
-	margin-top: 50px;
-}
-#workoutgroup{
-	margin-top: -70px;
+	margin-left: 200px;
 }
 #menu li ul{
 	position: absolute;
@@ -89,9 +81,39 @@ a img{
 	text-align: center;
 	border: 1px solid #463E4C;
 }
+.horizontal li:after{
+	content: " ";
+	position: relative;
+	top: 15px;
+	font-size: 12px;
+	line-height: 12px;
+	background: #FFF2BC url(../images/horizontal.png) repeat-x bottom center;
+	display: block;
+	height: 1px;
+	left: 150px;
+	width: 40px;
+}
 #menu li a:hover{
 	background: #000000;
 	color: #FF0000;
+}
+#menu  li.first {
+	background: #FFF2BC url(../images/firstnode.png) no-repeat;
+}
+#menu  li.last {
+	background: #FFF2BC url(../images/lastnode.png) no-repeat;
+}
+#me{
+	margin-top: 90px;
+}
+#aboutgroup{
+	margin-top: -143px;
+}
+#workout{
+	margin-top: 50px;
+}
+#workoutgroup{
+	margin-top: -70px;
 }
 .menu li a:link, .menu li a:visited{
 	display: block;
@@ -167,3 +189,26 @@ footer{
 	position: absolute;
 	bottom: 0px;
 }
+
+
+
+/*
+#menu ul {
+	list-style-type: none;
+	background: url(../images/vline.png) repeat-y;
+	margin: 0 0 0 90px;
+	padding: 0;
+}
+#menu li {
+	margin: 0;
+	padding: 0 12px;
+	background: url(../images/node.png) no-repeat;
+	font-weight: bold;
+}
+#menu li.first {
+	background: #FFF2BC url(../images/firstnode.png) no-repeat;
+}
+#menu li.last {
+	background: #FFF2BC url(../images/lastnode.png) no-repeat;
+}
+*/

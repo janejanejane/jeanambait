@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	var currentPage = 1;
-	
+/*
+	$('ul#menu ul:first-child').addClass('first');
+    $('ul#menu ul:last-child').addClass('last');
+    $('ul#menu li:first-child').addClass('first');
+    $('ul#menu li:last-child').addClass('last');
+	*/ 
 	$('#arrow').hide();
 	
 	$('.menu > li').bind('mouseover', openSubMenu);
