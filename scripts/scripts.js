@@ -5,19 +5,20 @@ $(document).ready(function(){
 		var link = $(this).attr('href');
 		
 		if(link != "index.html"){
-		var photo = $('#photo').slideUp('slow');
-		
-		$.when(photo).done(function(){
-			$.get(link, function(data){
-					var divDetails = $('#details div');
-					if(divDetails.length > 0){
-						$('#details div').remove();
-					}
-					$('#details').addClass('details');
-					$('#details').append(data);
+			link = "pages/" + link;
+			var photo = $('#photo').slideUp('slow');
+			
+			$.when(photo).done(function(){
+				$.get(link, function(data){
+						var divDetails = $('#details div');
+						if(divDetails.length > 0){
+							$('#details div').remove();
+						}
+						$('#details').addClass('details');
+						$('#details').append(data);
+					});
+					$('#puller').show();
 				});
-				$('#puller').show();
-			});
 		}else{
 			if(!$('#photo').is(":visible")){
 				pullPicture();
