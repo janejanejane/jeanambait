@@ -143,10 +143,14 @@ a img{
 	background-image: url(../images/lastnode.png), url(../images/vertical.png);
 	background-repeat: no-repeat,  repeat-y;
 	background-position: 0 50px;
+	height: 60px;
 }
 li#parent{
 	background: none;
 	margin-bottom: 0px;
+}
+ul#child{
+	height: 230px;
 }
 #me{
 	margin-top: 90px;
@@ -158,7 +162,7 @@ li#parent{
 	margin-top: 50px;
 }
 #workoutgroup{
-	margin-top: -50px;
+	margin-top: -35px;
 }
 #left{
 	position: absolute;
