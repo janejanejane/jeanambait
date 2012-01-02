@@ -1,5 +1,6 @@
 body{
 	font-family: Tempus Sans Itc, sans-serif;
+	/*font-family: Tahoma, Geneva, sans-serif;*/
 	background-color: #FFF2BC;
 	font-size: 20px;
 	font-weight: bold;
@@ -20,6 +21,17 @@ a img{
 	position: relative;
 	width: 1000px;
 	height: 300px;
+}
+#puller{
+	display: none;
+	width: 100px;
+	height: 20px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	bottom: 100px;
+	cursor: pointer;
+	background: url(../images/arrow.png);
 }
 .holder{
 	width: 483px;
