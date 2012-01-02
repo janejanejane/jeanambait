@@ -1,7 +1,8 @@
 body{
 	font-family: Tempus Sans Itc, sans-serif;
 	/*font-family: Tahoma, Geneva, sans-serif;*/
-	background-color: #FFF2BC;
+	background-color: #FFFFFF;
+	color: #000000;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -22,16 +23,18 @@ a img{
 	width: 1000px;
 	height: 300px;
 }
+.details{
+	height: 550px;
+	padding: 10px;
+}
 #puller{
 	display: none;
-	width: 100px;
-	height: 20px;
+	width: 32px;
+	height: 32px;
 	margin: 0 auto;
 	padding: 0;
-	position: absolute;
-	bottom: 100px;
+	bottom: 10px;
 	cursor: pointer;
-	background: url(../images/arrow.png);
 }
 .holder{
 	width: 483px;
@@ -82,15 +85,15 @@ a img{
 	text-decoration: none;
 	padding: 5px 0;
 	width: 150px;
-	background: #FF0000;
+	background: #FFF380;
 	color: #000000;
 	float: left;
 	text-align: center;
 	border: 1px solid #463E4C;
 }
 #menu li a:hover{
-	background: #000000;
-	color: #FF0000;
+	background: #95B9C7;
+	color: #000000;
 }
 .horizontal {
 	background: url(../images/vertical.png) repeat-y;
@@ -100,7 +103,7 @@ a img{
 	position: relative;
 	font-size: 12px;
 	line-height: 12px;
-	background: #FFF2BC url(../images/horizontal.png) repeat-x;
+	background: #FFFFFF url(../images/horizontal.png) repeat-x;
 	background-position: 170px 0px;
 	display: block;
 	height: 1px;
@@ -113,7 +116,7 @@ a img{
 	position: relative;
 	font-size: 12px;
 	line-height: 12px;
-	background: #FFF2BC url(../images/horizontal.png) repeat-x;
+	background: #FFFFFF url(../images/horizontal.png) repeat-x;
 	background-position: 170px 0px;
 	display: block;
 	height: 1px;
@@ -122,21 +125,21 @@ a img{
 	width: 40px;
 }
 #menu  li.first {
-	background: #FFF2BC url(../images/firstnode.png) no-repeat;
+	background: #FFFFFF url(../images/firstnode.png) no-repeat;
 	margin-top: 0px;
 }
 #menu  li.first.horizontal{
-	background-color: #FFF2BC;
+	background-color: #FFFFFF;
 	background-image: url(../images/firstnode.png), url(../images/vertical.png);
 	background-repeat: no-repeat,  repeat-y, repeat-x;
 	background-position: 0 90px;
 }
 #menu  li.last {
-	background: #FFF2BC url(../images/lastnode.png) no-repeat;
+	background: #FFFFFF url(../images/lastnode.png) no-repeat;
 	margin-bottom: 0px;
 }
 #menu  li.last.horizontal{
-	background-color: #FFF2BC;
+	background-color: #FFFFFF;
 	background-image: url(../images/lastnode.png), url(../images/vertical.png);
 	background-repeat: no-repeat,  repeat-y;
 	background-position: 0 50px;
