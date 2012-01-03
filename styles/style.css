@@ -4,7 +4,6 @@ body{
 	background-color: #FFFFFF;
 	color: #000000;
 	font-size: 20px;
-	font-weight: bold;
 }
 a{
 	font-size: 12px;
@@ -13,6 +12,12 @@ a{
 }
 a img{
 	border: none;
+}
+b{
+	text-decoration: underline;
+}
+i{
+	font-size: 14px;
 }
 #container{
 	margin: 0 auto;
@@ -24,6 +29,9 @@ a img{
 	height: 300px;
 }
 .details{
+	font-family:  'Arial Narrow', sans-serif;
+	color: #333333;
+	background: #BDEDFF;
 	height: 550px;
 	padding: 10px;
 }
