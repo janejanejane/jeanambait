@@ -7,17 +7,20 @@ $(document).ready(function(){
 	page = (page == null) ? null : (page+'.html');
 	displayInfo(page);
 	
-	$('a').click(function(evt){
-		evt.preventDefault();
-		var link = $(this).attr('href');
-		displayInfo(link);
-	});
+	$('a').click(clickHandler);
 	
+	$('#socials').live('click', clickHandler);
 	
 	$('#puller').click(function(){
 		setUrlToDomainName(location);
 		pullPicture();
 	});
+	
+	function clickHandler(evt){
+		evt.preventDefault();
+		var link = $(this).attr('href');
+		displayInfo(link);
+	}
 	
 	function pullPicture(){
 			$('#details div').remove();
@@ -58,11 +61,24 @@ $(document).ready(function(){
 		history.replaceState('','home',location);	
 	}
 	
+	function addLinkColor(node){
+		$('#' + node).addClass('current');
+	}
+	
+	function removeLinkColor(node){
+		$('#' + node).removeClass('current');
+		
+	}
+	
 	function displayInfo(link){
+		var search = location.search;
+		removeLinkColor(search.substring(search.indexOf('=') + 1));
+		
 		if(link != "null"){
 			if(link != "index.html"){
 				var title = link.substring(0, link.indexOf('.'));
 				link = "pages/" + link;
+				addLinkColor(title);
 				
 				if(fileExists(getDomainName(location, null) + link)){
 					var photo = $('#photo').slideUp('slow');
@@ -84,6 +100,7 @@ $(document).ready(function(){
 				}
 			}else{
 				setUrlToDomainName(location, link);
+				addLinkColor('home');
 				if(!$('#photo').is(":visible")){
 					pullPicture();
 				}

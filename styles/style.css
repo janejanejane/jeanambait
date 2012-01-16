@@ -16,6 +16,9 @@ a img{
 b{
 	text-decoration: underline;
 }
+b a{
+	font-size: 22px;
+}
 i{
 	font-size: 14px;
 }
@@ -34,6 +37,9 @@ i{
 	background: #BDEDFF;
 	height: 550px;
 	padding: 10px;
+}
+#socials li{
+	list-style-type:square;
 }
 #puller{
 	display: none;
@@ -100,6 +106,10 @@ i{
 	border: 1px solid #463E4C;
 }
 #menu li a:hover{
+	background: #95B9C7;
+	color: #000000;
+}
+#menu li a.current{
 	background: #95B9C7;
 	color: #000000;
 }
