@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var location = document.location;	
 	var history = window.history;	
 	var page = "page";
+	var search = location.search;
 	
 	page = getUrlPageValue(page);
 	page = (page == null) ? null : (page+'.html');
@@ -12,8 +13,8 @@ $(document).ready(function(){
 	$('#socials').live('click', clickHandler);
 	
 	$('#puller').click(function(){
-		setUrlToDomainName(location);
 		pullPicture();
+		setUrlToDomainName(location);
 	});
 	
 	function clickHandler(evt){
@@ -23,10 +24,12 @@ $(document).ready(function(){
 	}
 	
 	function pullPicture(){
-			$('#details div').remove();
-			$('#details').removeClass('details');
-			$('#puller').hide();
-			$('#photo').slideDown('slow');
+		search = location.search;
+		removeLinkColor(search.substring(search.indexOf('=') + 1));
+		$('#details div').remove();
+		$('#details').removeClass('details');
+		$('#puller').hide();
+		$('#photo').slideDown('slow');
 	}
 	
 	function getUrlPageValue(page) {
@@ -57,8 +60,16 @@ $(document).ready(function(){
 	}
 	
 	function setUrlToDomainName(location, link){
+		addLinkColor('home');
 		location = getDomainName(location, link);
 		history.replaceState('','home',location);	
+	}
+	
+	function setHomePage(link){	
+		setUrlToDomainName(location, link);
+		if(!$('#photo').is(":visible")){
+			pullPicture();
+		}
 	}
 	
 	function addLinkColor(node){
@@ -66,12 +77,15 @@ $(document).ready(function(){
 	}
 	
 	function removeLinkColor(node){
-		$('#' + node).removeClass('current');
-		
+		if(node == ""){
+			$('#home').removeClass('current');
+		}else{
+			$('#' + node).removeClass('current');
+		}
 	}
 	
 	function displayInfo(link){
-		var search = location.search;
+		search = location.search;
 		removeLinkColor(search.substring(search.indexOf('=') + 1));
 		
 		if(link != "null"){
@@ -97,13 +111,11 @@ $(document).ready(function(){
 							});
 							$('#puller').show();
 						});
+				}else{
+					setHomePage(link);
 				}
 			}else{
-				setUrlToDomainName(location, link);
-				addLinkColor('home');
-				if(!$('#photo').is(":visible")){
-					pullPicture();
-				}
+				setHomePage(link);
 			}
 		}
 	}
