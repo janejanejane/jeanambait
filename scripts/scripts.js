@@ -1,14 +1,26 @@
 $(document).ready(function(){
 	var location = document.location;	
-	var history = window.history;	
-	var page = "page";
+	var history = window.history;
 	var search = location.search;
+	var page = "page";
+	var isIE = true;
 	
 	page = getUrlPageValue(page);
 	page = (page == null) ? null : (page+'.html');
-	displayInfo(page);
+	displayOnBrowser(page);
+		
+	if($.browser.msie){
+		isIE = true;
+	}else{
+		isIE = false;
+	}
 	
 	$('a').click(clickHandler);
+	
+	$('ul#socials li a').live('click', function(evt) {
+		evt.preventDefault();
+		window.open($(this).attr('href'), '_blank');
+	});
 	
 	$('#socials').live('click', clickHandler);
 	
@@ -20,12 +32,11 @@ $(document).ready(function(){
 	function clickHandler(evt){
 		evt.preventDefault();
 		var link = $(this).attr('href');
-		displayInfo(link);
+		displayOnBrowser(link);
 	}
 	
 	function pullPicture(){
-		search = location.search;
-		removeLinkColor(search.substring(search.indexOf('=') + 1));
+		removeParam();
 		$('#details div').remove();
 		$('#details').removeClass('details');
 		$('#puller').hide();
@@ -62,7 +73,12 @@ $(document).ready(function(){
 	function setUrlToDomainName(location, link){
 		addLinkColor('home');
 		location = getDomainName(location, link);
-		history.replaceState('','home',location);	
+		
+		if(isIE){
+			location.hash = '/';
+		}else{
+			history.replaceState('','home',location);	
+		}
 	}
 	
 	function setHomePage(link){	
@@ -84,11 +100,40 @@ $(document).ready(function(){
 		}
 	}
 	
-	function displayInfo(link){
-		search = location.search;
-		removeLinkColor(search.substring(search.indexOf('=') + 1));
+	function removeParam(){
+		var parameter = location.search;
+		var delimeter = '=';
 		
-		if(link != "null"){
+		if(isIE){
+			parameter = location.hash;
+			delimeter = '#';
+		}
+		
+		removeLinkColor(parameter.substring(parameter.indexOf(delimeter) + 1));
+	}
+	
+	function displayOnBrowser(link){
+		if(isIE){
+			forIE(link);
+		}else{
+			notForIE(link);
+		}	
+	}
+	
+	function forIE(link){
+		removeParam();
+		displayInfo(link);
+	}
+	
+	function notForIE(link){
+		removeParam();
+		displayInfo(link);
+	}
+	
+	function displayInfo(link){		
+		if(link == undefined){
+			addLinkColor('socials');
+		}else if(link != "null"){
 			if(link != "index.html"){
 				var title = link.substring(0, link.indexOf('.'));
 				link = "pages/" + link;
@@ -96,8 +141,12 @@ $(document).ready(function(){
 				
 				if(fileExists(getDomainName(location, null) + link)){
 					var photo = $('#photo').slideUp('slow');
-					
-					history.replaceState('',title,'?page=' + title);
+										
+					if(isIE){
+						location.hash = title;
+					}else{
+						history.replaceState('',title,'?page=' + title);
+					}
 					
 					$.when(photo).done(function(){
 						$.get(link, function(data){
