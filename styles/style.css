@@ -7,20 +7,28 @@ body{
 }
 a{
 	font-size: 12px;
-	color: #7E2217;
+	color: #F87431;
 	cursor: pointer;
 }
 a img{
 	border: none;
 }
 b{
-	text-decoration: underline;
+	font-family: 'Passion One', cursive;
+	font-weight: 400;
+	font-size: 30px;
+	color: #7E2217;
 }
 b a{
 	font-size: 22px;
 }
 i{
 	font-size: 14px;
+}
+p{
+	font-family: 'Asap', sans-serif;
+	font-weight: 400;
+	color: #2B547E;
 }
 #container{
 	margin: 0 auto;
