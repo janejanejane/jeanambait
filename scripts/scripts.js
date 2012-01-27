@@ -21,8 +21,15 @@ $(document).ready(function(){
 		evt.preventDefault();
 		window.open($(this).attr('href'), '_blank');
 	});
+		
+	$('#company p b a').live('click', function(evt) {
+		evt.preventDefault();
+		window.open($(this).attr('href'), '_blank');
+	});
 	
 	$('#socials').live('click', clickHandler);
+	
+	$('#company').live('click', clickHandler);
 	
 	$('#puller').click(function(){
 		pullPicture();
@@ -54,7 +61,7 @@ $(document).ready(function(){
 		);*/
 	}
 	
-	function getDomainName(location, link){
+	function getDomainName(location){
 		var root = location.protocol + '//' + (location.hostname || location.host);
 		
 		if (location.port || false) {
@@ -70,16 +77,15 @@ $(document).ready(function(){
 		return root;
 	}
 	
-	function setUrlToDomainName(location, link){
+	function setUrlToDomainName(location){
 		addLinkColor('home');
 		
 		if(isIE){
 			if(location.hash){
-				//location.href.replace(/#.*$/, '#');
-				location.href = getDomainName(location, link);
+				location.href = getDomainName(location);
 			}
 		}else{
-			location = getDomainName(location, link);
+			location = getDomainName(location);
 			history.replaceState('','home',location);	
 		}
 	}
@@ -88,7 +94,7 @@ $(document).ready(function(){
 		if(!$('#photo').is(":visible")){
 			pullPicture();
 		}
-		setUrlToDomainName(location, link);
+		setUrlToDomainName(location);
 	}
 	
 	function addLinkColor(node){
@@ -116,8 +122,9 @@ $(document).ready(function(){
 	}
 	
 	function displayOnBrowser(link){
-		removeParam();
-		displayInfo(link);
+		removeParam();	
+		(link.indexOf("jobhistory.html") == -1) ? removeScroller(link) : addScroller(link);
+		displayInfo(link);	
 	}
 	
 	function displayInfo(link){	
@@ -129,12 +136,11 @@ $(document).ready(function(){
 				link = "pages/" + link;
 				addLinkColor(title);
 				
-				if(fileExists(getDomainName(location, null) + link)){
+				if(fileExists(getDomainName(location) + link)){
 					var photo = $('#photo').slideUp('slow');
 										
 					if(isIE){
 						location.hash = title;
-						//location.search = "";
 					}else{
 						history.replaceState('',title,'?page=' + title);
 					}
@@ -158,6 +164,14 @@ $(document).ready(function(){
 				setHomePage(link);
 			}
 		}
+	}
+	
+	function removeScroller(link){
+		$('#details').removeClass('scrolled');
+	}
+	
+	function addScroller(link){
+		$('#details').addClass('scrolled');
 	}
 	
 	function fileExists(url){

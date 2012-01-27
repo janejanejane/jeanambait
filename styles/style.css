@@ -46,6 +46,9 @@ p{
 	height: 550px;
 	padding: 10px;
 }
+.scrolled{
+	overflow-y: scroll;
+}
 #socials li{
 	list-style-type:square;
 }
