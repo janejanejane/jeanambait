@@ -1,0 +1,13 @@
+body{
+	background: #FFFFFF;
+	font-family: 'Bad Script', cursive;
+}
+canvas[id^="drawingBoard"]{
+	border: 1px solid #999999;
+	width: 900px;
+	height: 500px;
+	background: #F88158;
+	top: 100px;
+	left: 200px;
+	position: absolute;
+}

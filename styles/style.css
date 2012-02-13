@@ -149,7 +149,7 @@ p{
 	background-position: 170px 0px;
 	display: block;
 	height: 1px;
-	top: 60px;
+	top: 82px;
 	left: 151px;
 	width: 40px;
 }
@@ -171,8 +171,8 @@ p{
 	background-color: #FFFFFF;
 	background-image: url(../images/lastnode.png), url(../images/vertical.png);
 	background-repeat: no-repeat,  repeat-y;
-	background-position: 0 50px;
-	height: 60px;
+	background-position: 0 70px;
+	height: 80px;
 }
 li#parent{
 	background: none;
@@ -188,10 +188,10 @@ ul#child{
 	margin-top: -133px;
 }
 #workout{
-	margin-top: 50px;
+	margin-top: 70px;
 }
 #workoutgroup{
-	margin-top: -35px;
+	margin-top: -55px;
 }
 #left{
 	position: absolute;
