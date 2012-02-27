@@ -49,17 +49,30 @@ p{
 .scrolled{
 	overflow-y: scroll;
 }
+.left{
+	background: url(../images/Blue-arrow-left-32.png);
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.right{
+	background: url(../images/Blue-arrow-right-32.png);
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
 #socials li{
 	list-style-type:square;
 }
 #puller{
 	display: none;
-	width: 32px;
 	height: 32px;
+	width: 450px;
 	margin: 0 auto;
-	padding: 0;
-	bottom: 10px;
-	cursor: pointer;
 }
 .holder{
 	width: 483px;
@@ -68,6 +81,7 @@ p{
 	-moz-box-shadow: 5px 5px 10px #999999;
 	-webkit-box-shadow: 5px 5px 10px #999999;
 	box-shadow: 5px 5px 10px #999999;
+	background: #BDEDFF;
 }
 #menu{
 	margin: 0;

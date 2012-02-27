@@ -4,7 +4,16 @@ $(document).ready(function(){
 	var history = window.history;
 	var page = "page";
 	var isIE = false;
+	var listHead = new DoublyLinkedList();
+	var nodes = ["index.html",
+	"me.html","education.html",
+	"contactinfo.html","currentjob.html",
+	"jobhistory.html","socials.html",
+	"workout.html","roundcircles.html",
+	"hearts.html","site.html"];
 
+	defineList(listHead, nodes);
+	
 	isIE = ($.browser.msie) ? true : false; //checks browser type
 		
 	page = getUrlPageValue(page);
@@ -26,18 +35,39 @@ $(document).ready(function(){
 	$('#socials').live('click', clickHandler);
 	
 	$('#company').live('click', clickHandler);
-	
+
 	//if clicked, shows the default image and sets the URL to domain name and port number (if any)
-	$('#puller').click(function(){
+	/*$('#puller').click(function(){
 		pullPicture();
 		setUrlToDomainName(location);
-	});
+	});**/
+		
+	//constructs the doubly linked list for prev/next functionality
+	function defineList(list, nodes){
+		for(var i=0; i<nodes.length; i++){
+			list.add(nodes[i]);
+			//console.log(list.item(i));
+		}
+	}
 	
 	//prevents the default behavior of a link
 	function clickHandler(evt){
 		evt.preventDefault();
 		var link = $(this).attr('href');
 		displayOnBrowser(link); //displays either for IE or none-IE
+	}
+	
+	//shows the prev/next links
+	function fixLinks(link){
+		if(link != null){
+			var itemIndex = $.inArray(link, nodes);
+			if(itemIndex > -1){
+				var left = listHead.item(itemIndex).prev.data;
+				var right = listHead.item(itemIndex).next.data;
+				$('#prev').attr('href', left);
+				$('#next').attr('href', right);
+			}
+		}
 	}
 	
 	//removes data on the box and shows the face picture
@@ -131,6 +161,7 @@ $(document).ready(function(){
 	function displayOnBrowser(link){
 		removeParam();	
 		(link.indexOf("jobhistory.html") == -1) ? removeScroller(link) : addScroller(link);
+		fixLinks(link);
 		displayInfo(link);	
 	}
 	
